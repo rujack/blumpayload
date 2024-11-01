@@ -1,8 +1,10 @@
 import express from 'express';
 import { Blum } from './blum_worker.mjs';
+import cors from 'cors'
 
 const app = express();
 
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -43,7 +45,4 @@ app.post('/blum', async (req, res) => {
   }
 });
 
-
-
-app.listen(process.env.PORT || 3000, () => console.log('Example app is running'));
-
+app.listen(process.env.PORT || 3000, () => console.log('Example app is listening on port 3000.'));
