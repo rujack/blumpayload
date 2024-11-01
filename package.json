@@ -1,12 +1,17 @@
 {
   "name": "blumapi",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js "
   },
+  "engines": {
+    "node": "22.x",
+    "npm": "10.x"
+},
+"main": "index.ts",
   "keywords": [],
   "author": "",
   "license": "ISC",
